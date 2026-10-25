@@ -1,0 +1,3 @@
+httpx>=0.27,<1
+httpcore>=1,<2
+Pillow>=10

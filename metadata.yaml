@@ -1,0 +1,7 @@
+name: astrbot_plugin_pixiv
+display_name: NekoNekoNin · P站搜图与画廊
+desc: 用自然语言搜索 Pixiv 插画，按收藏、点赞和浏览筛选，支持多页预览、当前会话发图与画廊管理。
+version: 1.1.3
+author: NekoNekoNin
+astrbot_version: '>=4.13.0'
+repo: https://github.com/NekoNekoNin/astrbot_plugin_pixiv

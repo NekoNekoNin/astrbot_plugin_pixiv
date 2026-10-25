@@ -1,0 +1,150 @@
+{
+  "enabled": {
+    "description": "基础 · 启用插件",
+    "type": "bool",
+    "default": true,
+    "hint": "暂停后停止搜索、看图和发图；管理页设置仍可使用。"
+  },
+  "search_enabled": {
+    "description": "标签搜索",
+    "type": "bool",
+    "default": true,
+    "hint": "控制 pixiv_search 工具、搜索命令及管理页搜索。"
+  },
+  "user_enabled": {
+    "description": "画师作品",
+    "type": "bool",
+    "default": true,
+    "hint": "通过已确认的 UID 或作者主页查询最近作品。"
+  },
+  "view_enabled": {
+    "description": "查看与预览图片",
+    "type": "bool",
+    "default": true,
+    "hint": "控制 pixiv_view 和管理页预览，不影响独立发图开关。"
+  },
+  "send_enabled": {
+    "description": "向当前聊天发图",
+    "type": "bool",
+    "default": true,
+    "hint": "控制 pixiv_send 和发图命令，不接受任意群号或QQ号。"
+  },
+  "attach_guidance": {
+    "description": "基础 · 相关话题自动检索指导",
+    "type": "bool",
+    "default": true,
+    "hint": "仅相关消息添加搜图、作者、页码和来源说明。"
+  },
+  "default_count": {
+    "description": "结果 · 默认作品数",
+    "type": "int",
+    "default": 3,
+    "hint": "1–5；模型工具可按问题独立指定数量。",
+    "slider": {
+      "min": 1,
+      "max": 5,
+      "step": 1
+    }
+  },
+  "proxy_mode": {
+    "description": "网络 · 连接方式",
+    "type": "string",
+    "default": "system",
+    "hint": "system 读取系统代理；direct 直连；custom 使用下方代理。",
+    "options": [
+      "system",
+      "direct",
+      "custom"
+    ],
+    "labels": [
+      "系统代理（推荐）",
+      "直接连接",
+      "自定义代理"
+    ]
+  },
+  "proxy_url": {
+    "description": "网络 · 自定义代理地址",
+    "type": "string",
+    "default": "",
+    "hint": "例如 http://127.0.0.1:7890；不支持用户名密码，不修改系统代理。",
+    "condition": {
+      "proxy_mode": "custom"
+    }
+  },
+  "timeout_seconds": {
+    "description": "高级 · 单次操作总时限（秒）",
+    "type": "int",
+    "default": 30,
+    "hint": "5–90秒；包含搜索详情和图片请求。",
+    "collapsed": true,
+    "slider": {
+      "min": 5,
+      "max": 90,
+      "step": 1
+    }
+  },
+  "max_image_mb": {
+    "description": "图片 · 单张大小上限（MiB）",
+    "type": "int",
+    "default": 4,
+    "hint": "1–8，默认与旧版一致为4；仅常规尺寸或动图静态预览。",
+    "slider": {
+      "min": 1,
+      "max": 8,
+      "step": 1
+    }
+  },
+  "exclude_ai": {
+    "description": "筛选 · 发现作品时排除 AI",
+    "type": "bool",
+    "default": true,
+    "hint": "标签与画师列表默认排除 AI。指定 PID 仍检查全年龄分级并返回 AI 标记，不把这个开关当作指定作品的拦截器。"
+  },
+  "cache_ttl_seconds": {
+    "description": "高级 · 元数据缓存（秒）",
+    "type": "int",
+    "default": 120,
+    "hint": "0–3600；0关闭缓存，图片不持久缓存。",
+    "collapsed": true,
+    "slider": {
+      "min": 0,
+      "max": 3600,
+      "step": 30
+    }
+  },
+  "cache_max_entries": {
+    "description": "高级 · 缓存条目上限",
+    "type": "int",
+    "default": 100,
+    "hint": "0–500；0关闭缓存。",
+    "collapsed": true,
+    "slider": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    }
+  },
+  "max_concurrency": {
+    "description": "高级 · 网络并发数",
+    "type": "int",
+    "default": 3,
+    "hint": "1–6；较低并发可减少站点限流。",
+    "collapsed": true,
+    "slider": {
+      "min": 1,
+      "max": 6,
+      "step": 1
+    }
+  },
+  "send_cooldown_seconds": {
+    "description": "发送 · 同一聊天发图冷却（秒）",
+    "type": "int",
+    "default": 8,
+    "hint": "0–120；发送失败不计入冷却。",
+    "slider": {
+      "min": 0,
+      "max": 120,
+      "step": 1
+    }
+  }
+}
