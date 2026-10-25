@@ -4,3 +4,4 @@ pytest-asyncio>=0.23
 docstring-parser>=0.16
 ruff>=0.8
 quart>=0.20,<1
+mcp>=1.20,<2
