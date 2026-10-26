@@ -1,10 +1,12 @@
 <img src="logo.png" width="80" height="80" alt="P站搜图与画廊图标">
 
-# NekoNekoNin · P站搜图与画廊
+# P站搜图与画廊
 
 用自然语言搜索 Pixiv 插画，按收藏、点赞和浏览筛选，支持多页预览、当前会话发图与画廊管理。
 
 版本：`1.1.3` · 许可：[MIT](LICENSE)
+
+作者：**NekoNekoNin**。
 
 ## 能做什么
 
@@ -20,7 +22,7 @@
 
 ## 设置
 
-入口：**AstrBot → 插件 → NekoNekoNin · P站搜图与画廊 → 配置**。常用选项直接显示，适用时提供中文下拉标签、数值滑块、条件显示与高级折叠。完整选项见 [配置说明](docs/CONFIGURATION.md)。
+入口：**AstrBot → 插件 → P站搜图与画廊 → 配置**。常用选项直接显示，适用时提供中文下拉标签、数值滑块、条件显示与高级折叠。完整选项见 [配置说明](docs/CONFIGURATION.md)。
 
 ## 聊天示例
 
